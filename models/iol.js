@@ -30,24 +30,30 @@ const iolSchema = new mongoose.Schema({
   nominal: {
     type: String,
   },
-  haigis: {
-    type: Array,
+  haigis0: {
+    type: String,
+
+  },haigis1: {
+    type: String,
+
+  },haigis2: {
+    type: String,
 
   },
   hoffer: {
-    type: [String],
+    type: String,
 
   },
   holl1: {
-    type: 'String',
+    type: String,
   
   },
   srkt: {
-    type: 'String',
+    type: String,
 
   },
   srk2: {
-    type:'String',
+    type:String,
   
   }
 })

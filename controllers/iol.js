@@ -6,10 +6,10 @@ iolRouter.get('/', (request,response) => {
   iolModel.find({}).then(data => {
     
     if (iol) {
-      let results = data.filter(r => r.iol.includes(iol))
-      response.json(results.map(databits => databits.toJSON()))
+      let results = data.filter(r => r.lens.includes(iol))
+      response.json(results)
     }
-    response.json(data.map(databit => databit.toJSON()))
+    response.json(data)
   }).catch((error) => console.log(error));
 })
 
@@ -23,6 +23,8 @@ iolRouter.post('/', (request,response,next) => {
     
     })
     .catch(error => next(error))
+
+  response.redirect(301, '/index.html');
 })
 
 
