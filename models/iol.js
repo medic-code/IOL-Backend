@@ -55,6 +55,9 @@ const iolSchema = new mongoose.Schema({
   srk2: {
     type:String,
   
+  },website: {
+    type:String,
+  
   }
 })
 
