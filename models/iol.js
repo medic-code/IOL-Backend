@@ -8,6 +8,12 @@ const iolSchema = new mongoose.Schema({
   },material: {
     type: String,
  
+  },opmaterial: {
+    type: String,
+ 
+  },hapmaterial: {
+    type: String,
+ 
   },design: {
     type: String,
     
