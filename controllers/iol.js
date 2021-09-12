@@ -7,7 +7,7 @@ iolRouter.get('/', (request,response) => {
     
     if (iol) {
       let results = data.filter(r => r.lens.includes(iol))
-      response.json(results)
+      return response.json(results)
     }
     response.json(data)
   }).catch((error) => console.log(error));
