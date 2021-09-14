@@ -50,7 +50,7 @@ const iolSchema = new mongoose.Schema({
     type: String,
 
   },
-  holl1: {
+  holladay: {
     type: String,
   
   },
