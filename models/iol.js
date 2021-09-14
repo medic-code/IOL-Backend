@@ -68,6 +68,10 @@ const iolSchema = new mongoose.Schema({
     type: String
   }, rfnb: {
     type: String
+  },cartridge: {
+    type: String
+  }, inyector: {
+    type: String
   }
 })
 
