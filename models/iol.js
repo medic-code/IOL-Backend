@@ -64,6 +64,10 @@ const iolSchema = new mongoose.Schema({
   },link: {
     type:String,
   
+  }, barret: {
+    type: String
+  }, rfnb: {
+    type: String
   }
 })
 
