@@ -36,13 +36,7 @@ const iolSchema = new mongoose.Schema({
   nominal: {
     type: String,
   },
-  haigis0: {
-    type: String,
-
-  },haigis1: {
-    type: String,
-
-  },haigis2: {
+  haigis: {
     type: String,
 
   },
@@ -65,8 +59,6 @@ const iolSchema = new mongoose.Schema({
     type:String,
   
   }, barret: {
-    type: String
-  }, rfnb: {
     type: String
   },cartridge: {
     type: String
