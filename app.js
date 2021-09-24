@@ -6,6 +6,7 @@ const multer = require('multer');
 const app = express();
 const upload = multer();
 const iolRouter = require('./controllers/iol');
+const viscoRouter = require('./controllers/visco');
 const mongoose = require('mongoose')
 const logger = require('./utils/logger');
 
@@ -30,8 +31,9 @@ app.use(upload.array());
 app.use(middleware.requestLogger);
 
 app.use('/api/iol', iolRouter);
+app.use('/api/visco', viscoRouter);
 
-app.use(middleware.unknownEndPoint)
+app.use(middleware.unknownEndPoint);
 
 
 module.exports = app;

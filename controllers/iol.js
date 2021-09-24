@@ -1,5 +1,6 @@
 const iolRouter = require('express').Router();
 const iolModel = require('../models/iol');
+const viscoModel = require('../models/visco');
 
 iolRouter.get('/', (request,response) => {
   const {iol} = request.query;
