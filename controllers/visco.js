@@ -11,14 +11,13 @@ viscoRouter.get('/', (request,response,next) => {
 viscoRouter.post('/', (request,response,next) => {
   const body = request.body;
   const newEntry = new viscoModel(body)
-   newEntry
-    .save()
+   newEntry.save()
     .then(saved =>{
-      response.json(saved)
+     return response.json(saved)
     })
     .catch(error => next(error))
-    alert('Success')
-    response.redirect(301, '/visco.html')
+    
+    response.redirect(301,'/visco.html')
 })
 
 module.exports = viscoRouter;
