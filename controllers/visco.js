@@ -17,8 +17,8 @@ viscoRouter.post('/', (request,response,next) => {
       response.json(saved)
     })
     .catch(error => next(error))
-
-
+    alert('Success')
+    response.redirect(301, '/visco.html')
 })
 
 module.exports = viscoRouter;
