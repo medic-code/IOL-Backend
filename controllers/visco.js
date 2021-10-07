@@ -1,23 +1,16 @@
 const viscoModel = require('../models/visco');
 const viscoRouter = require('express').Router();
 
-viscoRouter.get('/', (request,response,next) => {
-  viscoModel.find({}).then(data => {
-      response.json(data);
-    })
-    .catch(error => next(error));
+viscoRouter.get('/', async (request,response) => {
+  let results = viscoModel.find({})
+  response.json(results);
 })
 
-viscoRouter.post('/', (request,response,next) => {
+viscoRouter.post('/', async (request,response) => {
   const body = request.body;
   const newEntry = new viscoModel(body)
-   newEntry.save()
-    .then(saved =>{
-     return response.json(saved)
-    })
-    .catch(error => next(error))
-    
-    response.redirect(301,'/visco.html')
+  newEntry.save()
+  response.redirect(301,'/visco.html')
 })
 
 module.exports = viscoRouter;
